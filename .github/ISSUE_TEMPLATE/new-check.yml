@@ -1,0 +1,57 @@
+name: New check
+description: Propose a check the skill should run
+labels: ["new-check"]
+body:
+  - type: markdown
+    attributes:
+      value: "A check must be verifiable by reading code or config, common in real apps, and not overlap an existing check. See CONTRIBUTING.md."
+  - type: dropdown
+    id: group
+    attributes:
+      label: Group
+      options:
+        - 1. Secrets
+        - 2. Auth
+        - 3. Database
+        - 4. Input
+        - 5. Exposure
+        - New group (explain below)
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Check title
+      placeholder: "Session cookies missing HttpOnly or Secure"
+    validations:
+      required: true
+  - type: textarea
+    id: attack
+    attributes:
+      label: The attack
+      description: Who does what, and what do they get?
+    validations:
+      required: true
+  - type: textarea
+    id: detect
+    attributes:
+      label: How to detect it
+      description: Search patterns, files to read, what counts as FAIL.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: The fix
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Proposed default severity
+      options:
+        - CRITICAL
+        - HIGH
+        - LOW
+    validations:
+      required: true

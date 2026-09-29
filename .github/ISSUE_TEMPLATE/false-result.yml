@@ -1,0 +1,55 @@
+name: Wrong result
+description: A check missed something real, or flagged something safe
+labels: ["wrong-result"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste real secrets, private code, or production URLs. Reduce it to a minimal snippet with fake values."
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - False negative (missed a real problem)
+        - False positive (flagged something safe)
+        - Wrong severity
+        - Wrong CAN'T TELL (it could have told)
+    validations:
+      required: true
+  - type: input
+    id: check
+    attributes:
+      label: Check ID
+      placeholder: "3.2"
+    validations:
+      required: true
+  - type: input
+    id: stack
+    attributes:
+      label: Stack
+      placeholder: "Next.js 15 app router, Supabase, Vercel"
+    validations:
+      required: true
+  - type: textarea
+    id: snippet
+    attributes:
+      label: Minimal snippet
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What the skill said vs. what it should have said
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and model used
+      placeholder: "Claude Code, ..."
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      placeholder: "0.1.0"
