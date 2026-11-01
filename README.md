@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.svg" alt="attacker-audit: Read-only agent skill that audits your web app like an attacker: 23 checks, PASS/FAIL/CAN'T TELL, ranked fix order."></p>
+
 # attacker-audit
 
 An agent skill that audits a web app codebase the way someone trying to break into it would look at it. It runs 23 checks, gives each one PASS, FAIL, or CAN'T TELL with file and line evidence, and ranks the failures into the order you should fix them.
