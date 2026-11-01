@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/banner.svg" alt="attacker-audit: Read-only agent skill that audits your web app like an attacker: 23 checks, PASS/FAIL/CAN'T TELL, ranked fix order." width="100%"></p>
+<p align="center"><img src="docs/banner.svg" alt="attacker-audit: Read-only agent skill that audits your web app like an attacker: 23 checks, PASS/FAIL/CAN'T TELL, ranked fix order."></p>
 
 # attacker-audit
 
